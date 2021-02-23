@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Vecharm">
+  <meta name="keywords" content="">
+  <title>android_version_adapt - Vecharm 的个人主页</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Vecharm</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              首页</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              归档</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">
+              <i class="iconfont icon-category-fill"></i>
+              分类</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">
+              <i class="iconfont icon-tags-fill"></i>
+              标签</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              关于</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2021-02-22 17:46">
+                    2021年2月22日 下午
+                  </time>
+                </div>
+              
+
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    3.1k 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    45
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <p><strong>Android各版本适配（基于6.0 ～ 9.0）</strong></p>
+<ol>
+<li><p><strong>Android 6.0 适配</strong></p>
+<p>在 Android 6.0 ~ Android 8.0，不需要一个一个申请危险权限。如果应用在运行时请求权限并且被授予该权限，系统会错误地将属于同一权限组并且在清单中注册的其他权限也一起授予应用，即对于同一组内的权限，只要有一个被同意，其他的都会被同意。</p>
+<p>在 Android 8.0 之后，此行为已被纠正。系统只会授予应用明确请求的权限。然而一旦用户为应用授予某个权限，则所有后续对该权限组中权限的请求都将被自动批准，但是若没有请求相应的权限而进行操作的话就会出现应用 crash 的情况。</p>
+<p>危险权限分组说明</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>权限组</th>
+<th>权限名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CALENDAR</td>
+<td>android.permission.READ_CALENDAR</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.WRITE_CALENDAR</td>
+</tr>
+<tr>
+<td>CAMERA</td>
+<td>android.permission.CAMERA</td>
+</tr>
+<tr>
+<td>CONTACTS</td>
+<td>android.permission.READ_CONTACTS</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.WRITE_CONTACTS</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.GET_ACCOUNTS</td>
+</tr>
+<tr>
+<td>LOCATION</td>
+<td>android.permission.ACCESS_FINE_LOCATION</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.ACCESS_COARSE_LOCATION</td>
+</tr>
+<tr>
+<td>MICROPHONE</td>
+<td>android.permission.RECORD_AUDIO</td>
+</tr>
+<tr>
+<td>PHONE</td>
+<td>android.permission.READ_PHONE_STATE</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.CALL_PHONE</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.READ_CALL_LOG</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.READ_CALL_LOG</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.ADD_VOICEMAIL</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.WRITE_CALL_LOG</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.USE_SIP</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.PROCESS_OUTGOING_CALLS</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SENSORS</td>
+<td>android.permission.BODY_SENSORS</td>
+</tr>
+<tr>
+<td>SMS</td>
+<td>android.permission.SEND_SMS</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.RECEIVE_SMS</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.READ_SMS</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.RECEIVE_WAP_PUSH</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.RECEIVE_MMS</td>
+</tr>
+<tr>
+<td>STORAGE</td>
+<td>android.permission.READ_EXTERNAL_STORAGE</td>
+</tr>
+<tr>
+<td></td>
+<td>android.permission.WRITE_EXTERNAL_STORAGE</td>
+</tr>
+</tbody></table>
+<ol>
+<li><p><strong>Android 7.0 适配</strong></p>
+<p><strong>应用间共享文件</strong><br>在 targetSdkVersion &gt;= 24 的app中，将严格执行 StrictMode 模式，也就是说，将对安全做更严格的校验。而从 Android N 开始，将不允许在 App 间，使用 file:// 的方式，传递一个 File ，否者会抛出 <code>FileUriExposedException</code>的错误，会直接引发 Crash。  </p>
+<pre><code>但是，既然官方对文件的分享做了一个这么强硬的修改（直接抛出异常），实际上也提供了解决方案，那就是 `FileProvider`，通过 `content://`的模式替换掉 `file://`，同时，需要开发者主动升级 targetSdkVersion 到 24 才会执行此策略。  
+FileProvider是android support v4包提供的，是ContentProvider的子类，便于将自己app的数据提供给其他app访问。  
+在app开发过程中需要用到FileProvider的主要有</code></pre><ol>
+<li><p>相机拍照以及图片裁剪</p>
+</li>
+<li><p>调用系统应用安装器安装apk（应用升级）<br>具体使用的方法<br>1、配置AndroidManifest文件</p>
+<pre><code class="hljs plain">&lt;provider
+          android:name&#x3D;&quot;android.support.v4.content.FileProvider&quot;
+          android:authorities&#x3D;&quot;$&#123;applicationId&#125;.provider&quot;
+          android:exported&#x3D;&quot;false&quot;
+          android:grantUriPermissions&#x3D;&quot;true&quot;&gt;
+          &lt;meta-data
+              android:name&#x3D;&quot;android.support.FILE_PROVIDER_PATHS&quot;
+              android:resource&#x3D;&quot;@xml&#x2F;provider_paths&quot; &#x2F;&gt;
+      &lt;&#x2F;provider&gt;</code></pre>
+
+<p><code>authorities</code>：一个标识，在当前系统内必须是唯一值，一般用包名。<br><code>exported</code>：表示该 FileProvider 是否需要公开出去。<br><code>granUriPermissions</code>：是否允许授权文件的临时访问权限。这里需要，所以是 true。</p>
+<p>2、在res的建xml目录，放入<code>provider_paths.xml</code>文件</p>
+<pre><code class="hljs plain">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;
+&lt;paths&gt;
+    &lt;external-path
+        name&#x3D;&quot;external_storage_root&quot;
+        path&#x3D;&quot;.&quot; &#x2F;&gt;
+    &lt;files-path
+        name&#x3D;&quot;files-path&quot;
+        path&#x3D;&quot;.&quot; &#x2F;&gt;
+    &lt;cache-path
+        name&#x3D;&quot;cache-path&quot;
+        path&#x3D;&quot;.&quot; &#x2F;&gt;
+    &lt;!--&#x2F;storage&#x2F;emulated&#x2F;0&#x2F;Android&#x2F;data&#x2F;...--&gt;
+    &lt;external-files-path
+        name&#x3D;&quot;external_file_path&quot;
+        path&#x3D;&quot;.&quot; &#x2F;&gt;
+    &lt;!--代表app 外部存储区域根目录下的文件 Context.getExternalCacheDir目录下的目录--&gt;
+    &lt;external-cache-path
+        name&#x3D;&quot;external_cache_path&quot;
+        path&#x3D;&quot;.&quot; &#x2F;&gt;
+    &lt;!--配置root-path。这样子可以读取到sd卡和一些应用分身的目录，否则微信分身保存的图片，就会导致 java.lang.IllegalArgumentException: Failed to find configured root that contains &#x2F;storage&#x2F;emulated&#x2F;999&#x2F;tencent&#x2F;MicroMsg&#x2F;WeiXin&#x2F;export1544062754693.jpg，在小米6的手机上微信分身有这个crash，华为没有
+--&gt;
+    &lt;root-path
+        name&#x3D;&quot;root-path&quot;
+        path&#x3D;&quot;&quot; &#x2F;&gt;
+&#x2F;paths&gt;</code></pre>
+
+</li>
+</ol>
+<p><code>root-path</code> 对应<code>DEVICE_ROOT</code>,也就是<code>File DEVICE_ROOT = new File(&quot;/&quot;)</code>，即根目录，一般不需要配置。<br><code>files-path</code>对应 content.getFileDir() 获取到的目录。<br><code>cache-path</code>对应 content.getCacheDir() 获取到的目录<br><code>external-path</code>对应 Environment.getExternalStorageDirectory() 指向的目录。<br><code>external-files-path</code>对应 ContextCompat.getExternalFilesDirs() 获取到的目录。<br><code>external-cache-path</code>对应 ContextCompat.getExternalCacheDirs() 获取到的目录。</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>TAG</th>
+<th>Value</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TAG_ROOT_PATH</td>
+<td>root-path</td>
+<td>/</td>
+</tr>
+<tr>
+<td>TAG_FILES_PATH</td>
+<td>files-path</td>
+<td>/data/data/&lt;包名&gt;/files</td>
+</tr>
+<tr>
+<td>TAG_CACHE_PATH</td>
+<td>cache-path</td>
+<td>/data/data/&lt;包名&gt;/cache</td>
+</tr>
+<tr>
+<td>TAG_EXTERNAL</td>
+<td>external-path</td>
+<td>/storage/emulate/0</td>
+</tr>
+<tr>
+<td>TAG_EXTERNAL_FILES</td>
+<td>external-files-path</td>
+<td>/storage/emulate/0/Android/data/&lt;包名&gt;/files</td>
+</tr>
+<tr>
+<td>TAG_EXTERNAL_CACHE</td>
+<td>external-cache-path</td>
+<td>/storage/emulate/0/Android/data/&lt;包名&gt;/cache</td>
+</tr>
+</tbody></table>
+<p>   注意点<br>           经过大量用户使用，后期反馈，在小米6，开启微信分身之后，分身微信保存的图片，使用FileProvider将一张图片的path转成Uri的过程中crash了。这张图片路径如下</p>
+<pre><code class="hljs plain">&#x2F;storage&#x2F;emulated&#x2F;999&#x2F;tencent&#x2F;MicroMsg&#x2F;WeiXin&#x2F;mmexport1544062754693.jpg</code></pre>
+
+<p>   你一定觉得很奇怪，正常路径是<code>/storage/emulate/0</code>，怎么会有<code>/storage/emulate/999</code>的路径，查找原因是应用分身导致的。之后会抛</p>
+<pre><code class="hljs plain">java.lang.IllegalArgumentException: Failed to find configured root that contains &#x2F;storage&#x2F;emulated&#x2F;999&#x2F;tencent&#x2F;MicroMsg&#x2F;WeiXin&#x2F;mmexport1544062754693.jpg</code></pre>
+
+<p>   那个时候，我的代码的xml的path里面是没有配置<code>root-path</code>节点的。debug时，fileProvide的mRoots是5个元素<br>   <img src="https://img-blog.csdnimg.cn/20181207134943228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejExNzk1MDM0MjI=,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
+<p>   后面我添加了<code>root-path</code>节点之后，mRoots变成了6个<br>   <img src="https://img-blog.csdnimg.cn/20181207135234566.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejExNzk1MDM0MjI=,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"><br>   之后就完美实现了将path转成Uri。<br>           部分手机可以插外置sdcard，比如红米手机，之后就导致找不到sdcard的root，这时候也是需要配置<code>root-path</code>。<br>           下面在聊一聊Android的文件系统<br>   外部存储的公共目录<br>   <code>DIRECTORY_MUSIC</code>：音乐类型 <code>/storage/emulate/0/music</code><br>   <code>DIRECTORY_PICTURES</code>：图片类型<br>   <code>DIRECTORY_MOVIES</code>：电影类型<br>   <code>DIRECTORY_DCIM</code>：照片类型,相机拍摄的照片视频都在这个目录（digital camera in memory） <code>/storage/emulate/0/DCIM</code><br>   <code>DIRECTORY_DOWNLOADS</code>：下载文件类型 <code>/storage/emulate/0/downloads</code><br>   <code>DIRECTORY_DOCUMENTS</code>：文档类型<br>   <code>DIRECTORY_RINGTONES</code>：铃声类型<br>   <code>DIRECTORY_ALARMS</code>：闹钟提示音类型<br>   <code>DIRECTORY_NOTIFICATIONS</code>：通知提示音类型<br>   <code>DIRECTORY_PODCASTS</code>：播客音频类型</p>
+<p>   这些可以通过Environment的getExternalStoragePublicDirectory()来获取</p>
+<pre><code class="hljs plain">public static File getExternalStoragePublicDirectory(String type);</code></pre>
+
+<p>   <strong>APK signature scheme v2</strong></p>
+<pre><code class="hljs plain">Android 7.0 引入一项新的应用签名方案 APK Signature Scheme v2，它能提供更快的应用安装时间和
+更多针对未授权 APK 文件更改的保护。在默认情况下，Android Studio 2.2 和 Android Plugin for 
+Gradle 2.2 会使用 APK Signature Scheme v2 和传统签名方案来签署您的应用。</code></pre>
+
+<p>   说明：</p>
+<p>   <img src="https://upload-images.jianshu.io/upload_images/7912789-da6e85a74c243749.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" srcset="/img/loading.gif" alt="签名打包"></p>
+<ol>
+<li><p>只勾选V1签名就是传统方案签署，但是在 Android 7.0 上不会使用V2安全的验证方式。</p>
+</li>
+<li><p>只勾选V2签名7.0以下会显示未安装，Android 7.0 上则会使用了V2安全的验证方式。</p>
+</li>
+<li><p>同时勾选V1和V2则所有版本都没问题。</p>
+<p><strong>org.apache不支持问题</strong></p>
+<pre><code class="hljs plain">&#x2F;&#x2F; build.gradle里面加上这句话
+defaultConfig &#123;
+    useLibrary &#39;org.apache.http.legacy&#39;
+&#125;</code></pre>
+
+<p><strong>SharedPreferences闪退</strong></p>
+<pre><code class="hljs plain">&#x2F;&#x2F; MODE_WORLD_READABLE：Android 7.0以后不能使用这个获取，会闪退
+&#x2F;&#x2F; 应修改成MODE_PRIVATE
+SharedPreferences read &#x3D; getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READABLE);</code></pre>
+</li>
+<li><p><strong>Android 8.0 适配</strong></p>
+<p><strong>Android 8.0中PHONE权限组新增两个权限</strong></p>
+<blockquote>
+<p>ANSWER_PHONE_CALLS：允许您的应用通过编程方式接听呼入电话。要在您的应用中处理呼入电话，您可以使用<br>acceptRingingCall() 函数。 READ_PHONE_NUMBERS：权限允许您的应用读取设备中存储的电话号码。</p>
+</blockquote>
+<p><strong>通知适配</strong></p>
+<p>Android 8.0中，为了更好的管制通知的提醒，不想一些不重要的通知打扰用户，新增了通知渠道，用户可以根据渠道来屏蔽一些不想要的通知。<br>代码示例如下：</p>
+<pre><code class="hljs plain">&#x2F;**
+ * Description: Android 8.0通知的兼容类
+ * Author: Jack Zhang
+ * create on: 2019&#x2F;1&#x2F;2 3:16 PM
+ *&#x2F;
+public class MyNotification
+&#123;
+
+  public static final String CHANNEL_ID_GL &#x3D; &quot;com.jz.gailun&quot;;
+  public static final String CHANNEL_NAME_GL &#x3D; &quot;盖伦&quot;;
+  public static final String CHANNEL_ID_AX &#x3D; &quot;com.jz.aixi&quot;;
+  public static final String CHANNEL_NAME_AX &#x3D; &quot;艾希&quot;;
+  public static final String CHANNEL_ID_LL &#x3D; &quot;com.jz.liulang&quot;;
+  public static final String CHANNEL_NAME_LL &#x3D; &quot;流浪&quot;;
+
+  public static void setONotifyChannel(NotificationManager manager, String channeId, String channelName)
+  &#123;
+    setONotifyChannel(manager, null, channeId, channelName);
+  &#125;
+
+  public static void setONotifyChannel(NotificationManager manager, NotificationCompat.Builder builder, String channeId, String channelName)
+  &#123;
+    if (TextUtils.isEmpty(channeId) || TextUtils.isEmpty(channelName))
+      Logger.e(&quot;Android 8.0 Notification的channeId与channelName不能为空&quot;);
+
+    if (Build.VERSION.SDK_INT &gt;&#x3D; 26)
+    &#123;
+      &#x2F;&#x2F; 第三个参数设置通知的优先级别
+      NotificationChannel channel &#x3D; new NotificationChannel(channeId, channelName, NotificationManager.IMPORTANCE_DEFAULT);
+      &#x2F;&#x2F; 是否可以绕过请勿打扰模式
+      channel.canBypassDnd();
+      &#x2F;&#x2F; 是否可以显示icon角标
+      channel.canShowBadge();
+      &#x2F;&#x2F; 是否显示通知闪灯
+      channel.enableLights(true);
+      &#x2F;&#x2F; 收到消息时震动提示
+      channel.enableVibration(true);
+      &#x2F;&#x2F; 设置绕过免打扰
+      channel.setBypassDnd(true);
+      channel.setLockscreenVisibility(NotificationCompat.VISIBILITY_SECRET);
+      &#x2F;&#x2F; 设置闪光灯颜色
+      channel.setLightColor(Color.RED);
+      &#x2F;&#x2F; 获取设置铃声设置
+      channel.getAudioAttributes();
+      &#x2F;&#x2F; 设置震动模式
+      channel.setVibrationPattern(new long[]&#123;100, 200, 100&#125;);
+      &#x2F;&#x2F; 是否会闪光
+      channel.shouldShowLights();
+      if (manager !&#x3D; null)
+        manager.createNotificationChannel(channel);
+      if (builder !&#x3D; null)
+        builder.setChannelId(channeId);&#x2F;&#x2F;这个id参数要与上面channel构建的第一个参数对应
+    &#125;
+  &#125;
+
+  public static Notification getNotification(Context context, String channelId)
+  &#123;
+    NotificationCompat.Builder notificationBuilder &#x3D; new NotificationCompat.Builder(context, channelId);
+    Notification notification &#x3D; notificationBuilder.setOngoing(true)
+            .setSmallIcon(R.mipmap.ic_logo)
+            .setPriority(NotificationManager.IMPORTANCE_MIN)
+            .setCategory(Notification.CATEGORY_SERVICE)
+            .build();
+    return notification;
+  &#125;
+&#125;</code></pre>
+
+<pre><code class="hljs plain">&#x2F;**
+ * Description: 通知管理类
+ * Author: Jack Zhang
+ * create on: 2019&#x2F;1&#x2F;2 3:23 PM
+ *&#x2F;
+public class NotifyManager
+&#123;
+  private volatile static NotifyManager INSTANCE;
+
+  private NotifyManager(Context context)
+  &#123;
+    initNotifyManager(context);
+  &#125;
+
+  public static NotifyManager getInstance(Context context)
+  &#123;
+    if (INSTANCE &#x3D;&#x3D; null)
+      synchronized (NotifyManager.class)
+      &#123;
+        if (INSTANCE &#x3D;&#x3D; null)
+          INSTANCE &#x3D; new NotifyManager(context);
+      &#125;
+    return INSTANCE;
+  &#125;
+
+  private NotificationManager manager;
+  &#x2F;&#x2F; NotificationManagerCompat
+  private NotificationCompat.Builder builder;
+
+  &#x2F;&#x2F; 初始化通知栏配置
+  private void initNotifyManager(Context context)
+  &#123;
+    context &#x3D; context.getApplicationContext();
+    manager &#x3D; (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+&#x2F;&#x2F;    &#x2F;&#x2F; 如果存在则清除上一个消息
+&#x2F;&#x2F;    manager.cancel(lastNotificationId);
+    builder &#x3D; new NotificationCompat.Builder(context, MyNotification.CHANNEL_ID_GL);
+
+    MyNotification.setONotifyChannel(manager, builder, MyNotification.CHANNEL_ID_GL, MyNotification.CHANNEL_NAME_GL);
+
+    &#x2F;&#x2F; 设置标题
+    builder.setContentTitle(&quot;Title&quot;);
+    &#x2F;&#x2F; 状态栏的动画提醒语句
+    builder.setTicker(&quot;Ticker&quot;);
+    &#x2F;&#x2F; 什么时候提醒
+    builder.setWhen(System.currentTimeMillis());
+    &#x2F;&#x2F; 设置通知栏的优先级
+    builder.setPriority(Notification.PRIORITY_DEFAULT);
+    &#x2F;&#x2F; 设置点击可消失
+    builder.setAutoCancel(true);
+    &#x2F;&#x2F; 设置是否震动等
+    builder.setDefaults(Notification.DEFAULT_VIBRATE);
+    &#x2F;&#x2F; 设置icon
+    builder.setSmallIcon(R.mipmap.ic_logo);
+    &#x2F;&#x2F; 设置点击意图
+    Intent intent &#x3D; new Intent(context, MainActivity.class);
+    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    PendingIntent pendingIntent &#x3D; PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    builder.setContentIntent(pendingIntent);
+  &#125;
+
+  &#x2F;**
+   * 显示盖伦通知栏
+   *
+   * @author Jack Zhang
+   * create at 2019&#x2F;1&#x2F;2 3:28 PM
+   *&#x2F;
+  public void showGLNotify(Context context)
+  &#123;
+    &#x2F;&#x2F; 设置内容
+    builder.setContentText(&quot;盖伦&quot;);
+    manager.notify(1, builder.build());
+  &#125;
+
+  &#x2F;**
+   * 显示艾希通知栏
+   *
+   * @author Jack Zhang
+   * create at 2019&#x2F;1&#x2F;2 3:28 PM
+   *&#x2F;
+  public void showAXNotify(Context context)
+  &#123;
+    builder.setContentText(&quot;艾希&quot;);
+    manager.notify(2, builder.build());
+  &#125;
+
+  &#x2F;**
+   * 显示流浪通知栏
+   *
+   * @author Jack Zhang
+   * create at 2019&#x2F;1&#x2F;2 3:28 PM
+   *&#x2F;
+  public void showLLNotify(Context context)
+  &#123;
+    builder.setContentText(&quot;流浪&quot;);
+    manager.notify(3, builder.build());
+  &#125;
+&#125;</code></pre>
+
+<p><strong>SecurityException的闪退</strong></p>
+<p>问题原因：项目使用了ActiveAndroid，在 8.0 或 8.1 系统上使用 26 或以上的版本的 SDK 时，调用 ContentResolver 的 notifyChange 方法通知数据更新，或者调用 ContentResolver 的 registerContentObserver 方法监听数据变化时，会出现上述异常。</p>
+<p><strong>解决方案：</strong><br>在清单文件配置：</p>
+<pre><code class="hljs plain">&lt;provider
+       android:name&#x3D;&quot;com.activeandroid.content.ContentProvider&quot;
+       android:authorities&#x3D;&quot;com.jz.androidclient&quot;
+       android:enabled&#x3D;&quot;true&quot;
+       android:exported&#x3D;&quot;false&quot;&#x2F;&gt;</code></pre>
+
+<p>去掉这个监听刷新的方法，改为广播刷新</p>
+<p><strong>静态广播无法正常接收</strong></p>
+<blockquote>
+<p>问题原因：Android 8.0 引入了新的广播接收器限制，因此您应该移除所有为隐式广播 Intent 注册的广播接收器。<br>解决方案：使用动态广播代替静态广播。</p>
+</blockquote>
+<p><strong>Only fullscreen opaque activities can request orientation</strong></p>
+<blockquote>
+<p>Caused by: java.lang.IllegalStateException: Only fullscreen opaque<br>activities can request orientation</p>
+</blockquote>
+<p>问题原因：Android 8.0 非全屏透明页面不允许设置方向（后面8.1系统谷歌就去掉了这个限制，可能是真的没必要）</p>
+<p><strong>解决方案：</strong></p>
+<ol>
+<li>android:windowIsTranslucent设置为false。</li>
+<li>如果还是想用的话，就去掉清单文件中Activity中的android:screenOrientation=“portrait”。</li>
+<li>使用透明的dialog或者PopupWindow来代替，也可以用DialogFragment，看自己的需求和喜好。</li>
+</ol>
+</li>
+<li><p><strong>Android 9.0 适配</strong></p>
+<p><strong>CLEARTEXT communication to <a href="http://life.115.com/" target="_blank" rel="noopener">life.115.com</a> not permitted by network security policy</strong></p>
+<blockquote>
+<p>CLEARTEXT communication to <a href="http://life.115.com/" target="_blank" rel="noopener">life.115.com</a> not permitted by network<br>security polic</p>
+</blockquote>
+<p>问题原因： Android P 限制了明文流量的网络请求，非加密的流量请求都会被系统禁止掉</p>
+<p>解决方案：</p>
+<p>在资源文件新建xml目录，新建文件network_security_config.xml</p>
+<pre><code class="hljs plain">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;utf-8&quot;?&gt;
+&lt;network-security-config&gt;
+    &lt;base-config cleartextTrafficPermitted&#x3D;&quot;true&quot; &#x2F;&gt;
+&lt;&#x2F;network-security-config&gt;</code></pre>
+
+<p>清单文件配置：</p>
+<pre><code class="hljs plain">&lt;application
+    android:networkSecurityConfig&#x3D;&quot;@xml&#x2F;network_security_config&quot;&gt;
+    &lt;!--Android 9.0加的--&gt;
+    &lt;uses-library
+        android:name&#x3D;&quot;org.apache.http.legacy&quot;
+        android:required&#x3D;&quot;false&quot; &#x2F;&gt;
+&lt;&#x2F;application&gt;</code></pre>
+
+<p><strong>其他Api的修改</strong></p>
+<blockquote>
+<p>java.lang.IllegalArgumentException: Invalid Region.Op - only INTERSECT<br>and DIFFERENCE are allowed</p>
+</blockquote>
+<pre><code class="hljs plain">if (Build.VERSION.SDK_INT &gt;&#x3D; 26) 
+  canvas.clipPath(mPath); 
+else
+  canvas.clipPath(mPath, Region.Op.REPLACE);</code></pre>
+
+</li>
+</ol>
+<p>转载<br><a href="https://blog.csdn.net/wxz1179503422/article/details/84874171" target="_blank" rel="noopener">https://blog.csdn.net/wxz1179503422/article/details/84874171</a><br><a href="https://blog.csdn.net/weixin_41729259/article/details/89368713?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.control&amp;dist_request_id=ebfab3d9-0b16-4f74-9fed-c5c0c8ca2ac5&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.control" target="_blank" rel="noopener">https://blog.csdn.net/weixin_41729259/article/details/89368713?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.control&amp;dist_request_id=ebfab3d9-0b16-4f74-9fed-c5c0c8ca2ac5&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.control</a></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/22/hello-world/">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/main.js" ></script>
+
+
+  <script  src="/js/lazyload.js" ></script>
+
+
+
+  
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "android_version_adapt&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
