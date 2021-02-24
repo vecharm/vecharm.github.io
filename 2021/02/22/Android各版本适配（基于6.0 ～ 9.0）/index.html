@@ -1,40 +1,54 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-
+<html lang="zh-CN" data-default-color-scheme=&#34;light&#34;>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  
+    <meta name="description" content="">
+  
   <meta name="author" content="Vecharm">
   <meta name="keywords" content="">
+  
   <title>Android各版本适配（基于6.0 ～ 9.0） - Vecharm 的个人主页</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-<link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
-
-
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -42,6 +56,12 @@
 <!-- 自定义样式保持在最底部 -->
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 
@@ -65,52 +85,73 @@
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/">
-              <i class="iconfont icon-home-fill"></i>
-              首页</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
         
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/archives/">
-              <i class="iconfont icon-archive-fill"></i>
-              归档</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
         
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/categories/">
-              <i class="iconfont icon-category-fill"></i>
-              分类</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
         
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/tags/">
-              <i class="iconfont icon-tags-fill"></i>
-              标签</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
         
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/about/">
-              <i class="iconfont icon-user-fill"></i>
-              关于</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
       </ul>
@@ -118,48 +159,53 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax=true
+    <div class="banner" id="banner" parallax=true
          style="background: url('/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
-            <span class="h2" id="subtitle">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Android各版本适配（基于6.0 ～ 9.0）">
               
             </span>
 
             
-              
-                <div class="mt-3 post-meta">
-                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-                  <time datetime="2021-02-22 17:46">
-                    2021年2月22日 下午
-                  </time>
-                </div>
-              
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-02-22 17:46" pubdate>
+        2021年2月22日 下午
+      </time>
+    </span>
+  
+</div>
 
-              <div class="mt-1">
-                
-                  
-                  <span class="post-meta mr-2">
-                    <i class="iconfont icon-chart"></i>
-                    2.9k 字
-                  </span>
-                
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.9k 字
+    </span>
+  
 
-                
-                  
-                  <span class="post-meta mr-2">
-                      <i class="iconfont icon-clock-fill"></i>
-                    
-                    
-                    40
-                     分钟
-                  </span>
-                
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      40
+       分钟
+    </span>
+  
 
-                
-              </div>
+  
+  
+</div>
+
             
           </div>
 
@@ -173,15 +219,17 @@
     
       
 
-<div class="container-fluid">
-  <div class="row">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
     <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
         <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Android各版本适配（基于6.0 ～ 9.0）</h1>
             
-            <article class="markdown-body">
+            <div class="markdown-body">
               <p><strong>Android各版本适配（基于6.0 ～ 9.0）</strong></p>
 <ol>
 <li><p><strong>Android 6.0 适配</strong></p>
@@ -311,43 +359,11 @@ FileProvider是android support v4包提供的，是ContentProvider的子类，�
 <li><p>相机拍照以及图片裁剪</p>
 </li>
 <li><p>调用系统应用安装器安装apk（应用升级）<br>具体使用的方法<br>1、配置AndroidManifest文件</p>
-<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">provider</span></span>
-<span class="hljs-tag">          <span class="hljs-attr">android:name</span>=<span class="hljs-string">"android.support.v4.content.FileProvider"</span></span>
-<span class="hljs-tag">          <span class="hljs-attr">android:authorities</span>=<span class="hljs-string">"$&#123;applicationId&#125;.provider"</span></span>
-<span class="hljs-tag">          <span class="hljs-attr">android:exported</span>=<span class="hljs-string">"false"</span></span>
-<span class="hljs-tag">          <span class="hljs-attr">android:grantUriPermissions</span>=<span class="hljs-string">"true"</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span></span>
-<span class="hljs-tag">              <span class="hljs-attr">android:name</span>=<span class="hljs-string">"android.support.FILE_PROVIDER_PATHS"</span></span>
-<span class="hljs-tag">              <span class="hljs-attr">android:resource</span>=<span class="hljs-string">"@xml/provider_paths"</span> /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">provider</span>&gt;</span></code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">provider</span></span><br><span class="hljs-tag">          <span class="hljs-attr">android:name</span>=<span class="hljs-string">"android.support.v4.content.FileProvider"</span></span><br><span class="hljs-tag">          <span class="hljs-attr">android:authorities</span>=<span class="hljs-string">"$&#123;applicationId&#125;.provider"</span></span><br><span class="hljs-tag">          <span class="hljs-attr">android:exported</span>=<span class="hljs-string">"false"</span></span><br><span class="hljs-tag">          <span class="hljs-attr">android:grantUriPermissions</span>=<span class="hljs-string">"true"</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">meta-data</span></span><br><span class="hljs-tag">              <span class="hljs-attr">android:name</span>=<span class="hljs-string">"android.support.FILE_PROVIDER_PATHS"</span></span><br><span class="hljs-tag">              <span class="hljs-attr">android:resource</span>=<span class="hljs-string">"@xml/provider_paths"</span> /&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">provider</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p><code>authorities</code>：一个标识，在当前系统内必须是唯一值，一般用包名。<br><code>exported</code>：表示该 FileProvider 是否需要公开出去。<br><code>granUriPermissions</code>：是否允许授权文件的临时访问权限。这里需要，所以是 true。</p>
 <p>2、在res的建xml目录，放入<code>provider_paths.xml</code>文件</p>
-<pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">paths</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">external-path</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"external_storage_root"</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">files-path</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"files-path"</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">cache-path</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"cache-path"</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span>
-    <span class="hljs-comment">&lt;!--/storage/emulated/0/Android/data/...--&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">external-files-path</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"external_file_path"</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span>
-    <span class="hljs-comment">&lt;!--代表app 外部存储区域根目录下的文件 Context.getExternalCacheDir目录下的目录--&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">external-cache-path</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"external_cache_path"</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span>
-    <span class="hljs-comment">&lt;!--配置root-path。这样子可以读取到sd卡和一些应用分身的目录，否则微信分身保存的图片，就会导致 java.lang.IllegalArgumentException: Failed to find configured root that contains /storage/emulated/999/tencent/MicroMsg/WeiXin/export1544062754693.jpg，在小米6的手机上微信分身有这个crash，华为没有</span>
-<span class="hljs-comment">--&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">root-path</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"root-path"</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">""</span> /&gt;</span>
-/paths&gt;</code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">paths</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">external-path</span></span><br><span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"external_storage_root"</span></span><br><span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">files-path</span></span><br><span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"files-path"</span></span><br><span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">cache-path</span></span><br><span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"cache-path"</span></span><br><span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span><br>    <span class="hljs-comment">&lt;!--/storage/emulated/0/Android/data/...--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">external-files-path</span></span><br><span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"external_file_path"</span></span><br><span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span><br>    <span class="hljs-comment">&lt;!--代表app 外部存储区域根目录下的文件 Context.getExternalCacheDir目录下的目录--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">external-cache-path</span></span><br><span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"external_cache_path"</span></span><br><span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">"."</span> /&gt;</span><br>    <span class="hljs-comment">&lt;!--配置root-path。这样子可以读取到sd卡和一些应用分身的目录，否则微信分身保存的图片，就会导致 java.lang.IllegalArgumentException: Failed to find configured root that contains /storage/emulated/999/tencent/MicroMsg/WeiXin/export1544062754693.jpg，在小米6的手机上微信分身有这个crash，华为没有</span><br><span class="hljs-comment">--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">root-path</span></span><br><span class="hljs-tag">        <span class="hljs-attr">name</span>=<span class="hljs-string">"root-path"</span></span><br><span class="hljs-tag">        <span class="hljs-attr">path</span>=<span class="hljs-string">""</span> /&gt;</span><br>/paths&gt;<br></code></pre></td></tr></table></figure>
 
 </li>
 </ol>
@@ -394,20 +410,18 @@ FileProvider是android support v4包提供的，是ContentProvider的子类，�
 </tr>
 </tbody></table>
 <p>   注意点<br>           经过大量用户使用，后期反馈，在小米6，开启微信分身之后，分身微信保存的图片，使用FileProvider将一张图片的path转成Uri的过程中crash了。这张图片路径如下</p>
-<pre><code class="hljs plain">&#x2F;storage&#x2F;emulated&#x2F;999&#x2F;tencent&#x2F;MicroMsg&#x2F;WeiXin&#x2F;mmexport1544062754693.jpg</code></pre>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/storage/</span>emulated<span class="hljs-regexp">/999/</span>tencent<span class="hljs-regexp">/MicroMsg/</span>WeiXin<span class="hljs-regexp">/mmexport1544062754693.jpg</span><br></code></pre></td></tr></table></figure>
 
 <p>   你一定觉得很奇怪，正常路径是<code>/storage/emulate/0</code>，怎么会有<code>/storage/emulate/999</code>的路径，查找原因是应用分身导致的。之后会抛</p>
-<pre><code class="hljs plain">java.lang.IllegalArgumentException: Failed to find configured root that contains &#x2F;storage&#x2F;emulated&#x2F;999&#x2F;tencent&#x2F;MicroMsg&#x2F;WeiXin&#x2F;mmexport1544062754693.jpg</code></pre>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle">java.lang.IllegalArgumentException: Failed to <span class="hljs-keyword">find</span> configured root that contains <span class="hljs-regexp">/storage/</span>emulated<span class="hljs-regexp">/999/</span>tencent<span class="hljs-regexp">/MicroMsg/</span>WeiXin<span class="hljs-regexp">/mmexport1544062754693.jpg</span><br></code></pre></td></tr></table></figure>
 
 <p>   那个时候，我的代码的xml的path里面是没有配置<code>root-path</code>节点的。debug时，fileProvide的mRoots是5个元素<br>   <img src="https://img-blog.csdnimg.cn/20181207134943228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejExNzk1MDM0MjI=,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"></p>
 <p>   后面我添加了<code>root-path</code>节点之后，mRoots变成了6个<br>   <img src="https://img-blog.csdnimg.cn/20181207135234566.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejExNzk1MDM0MjI=,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" alt="在这里插入图片描述"><br>   之后就完美实现了将path转成Uri。<br>           部分手机可以插外置sdcard，比如红米手机，之后就导致找不到sdcard的root，这时候也是需要配置<code>root-path</code>。<br>           下面在聊一聊Android的文件系统<br>   外部存储的公共目录<br>   <code>DIRECTORY_MUSIC</code>：音乐类型 <code>/storage/emulate/0/music</code><br>   <code>DIRECTORY_PICTURES</code>：图片类型<br>   <code>DIRECTORY_MOVIES</code>：电影类型<br>   <code>DIRECTORY_DCIM</code>：照片类型,相机拍摄的照片视频都在这个目录（digital camera in memory） <code>/storage/emulate/0/DCIM</code><br>   <code>DIRECTORY_DOWNLOADS</code>：下载文件类型 <code>/storage/emulate/0/downloads</code><br>   <code>DIRECTORY_DOCUMENTS</code>：文档类型<br>   <code>DIRECTORY_RINGTONES</code>：铃声类型<br>   <code>DIRECTORY_ALARMS</code>：闹钟提示音类型<br>   <code>DIRECTORY_NOTIFICATIONS</code>：通知提示音类型<br>   <code>DIRECTORY_PODCASTS</code>：播客音频类型</p>
 <p>   这些可以通过Environment的getExternalStoragePublicDirectory()来获取</p>
-<pre><code class="hljs plain">public static File getExternalStoragePublicDirectory(String type);</code></pre>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">File</span> <span class="hljs-title">getExternalStoragePublicDirectory</span><span class="hljs-params">(<span class="hljs-keyword">String</span> type)</span></span>;<br></code></pre></td></tr></table></figure>
 
 <p>   <strong>APK signature scheme v2</strong></p>
-<pre><code class="hljs plain">Android 7.0 引入一项新的应用签名方案 APK Signature Scheme v2，它能提供更快的应用安装时间和
-更多针对未授权 APK 文件更改的保护。在默认情况下，Android Studio 2.2 和 Android Plugin for 
-Gradle 2.2 会使用 APK Signature Scheme v2 和传统签名方案来签署您的应用。</code></pre>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-keyword">Android </span><span class="hljs-number">7</span>.<span class="hljs-number">0</span> 引入一项新的应用签名方案 APK Signature Scheme <span class="hljs-built_in">v2</span>，它能提供更快的应用安装时间和<br>更多针对未授权 APK 文件更改的保护。在默认情况下，<span class="hljs-keyword">Android </span>Studio <span class="hljs-number">2</span>.<span class="hljs-number">2</span> 和 <span class="hljs-keyword">Android </span>Plugin for <br><span class="hljs-symbol">Gradle</span> <span class="hljs-number">2</span>.<span class="hljs-number">2</span> 会使用 APK Signature Scheme <span class="hljs-built_in">v2</span> 和传统签名方案来签署您的应用。<br></code></pre></td></tr></table></figure>
 
 <p>   说明：</p>
 <p>   <img src="https://upload-images.jianshu.io/upload_images/7912789-da6e85a74c243749.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" srcset="/img/loading.gif" alt="签名打包"></p>
@@ -418,15 +432,10 @@ Gradle 2.2 会使用 APK Signature Scheme v2 和传统签名方案来签署您�
 </li>
 <li><p>同时勾选V1和V2则所有版本都没问题。</p>
 <p><strong>org.apache不支持问题</strong></p>
-<pre><code class="hljs groovy"><span class="hljs-comment">// build.gradle里面加上这句话</span>
-defaultConfig &#123;
-    useLibrary <span class="hljs-string">'org.apache.http.legacy'</span>
-&#125;</code></pre>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs groovy"><span class="hljs-comment">// build.gradle里面加上这句话</span><br>defaultConfig &#123;<br>    useLibrary <span class="hljs-string">'org.apache.http.legacy'</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p><strong>SharedPreferences闪退</strong></p>
-<pre><code class="hljs java"><span class="hljs-comment">// MODE_WORLD_READABLE：Android 7.0以后不能使用这个获取，会闪退</span>
-<span class="hljs-comment">// 应修改成MODE_PRIVATE</span>
-SharedPreferences read = getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READABLE);</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// MODE_WORLD_READABLE：Android 7.0以后不能使用这个获取，会闪退</span><br><span class="hljs-comment">// 应修改成MODE_PRIVATE</span><br>SharedPreferences read = getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READABLE);<br></code></pre></td></tr></table></figure>
 </li>
 <li><p><strong>Android 8.0 适配</strong></p>
 <p><strong>Android 8.0中PHONE权限组新增两个权限</strong></p>
@@ -435,180 +444,14 @@ SharedPreferences read = getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READ
 </blockquote>
 <p><strong>通知适配</strong></p>
 <p>Android 8.0中，为了更好的管制通知的提醒，不想一些不重要的通知打扰用户，新增了通知渠道，用户可以根据渠道来屏蔽一些不想要的通知。<br>代码示例如下：</p>
-<pre><code class="hljs java"><span class="hljs-comment">/**</span>
-<span class="hljs-comment"> * Description: Android 8.0通知的兼容类</span>
-<span class="hljs-comment"> * Author: Jack Zhang</span>
-<span class="hljs-comment"> * create on: 2019/1/2 3:16 PM</span>
-<span class="hljs-comment"> */</span>
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyNotification</span></span>
-<span class="hljs-class"></span>&#123;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Description: Android 8.0通知的兼容类</span><br><span class="hljs-comment"> * Author: Jack Zhang</span><br><span class="hljs-comment"> * create on: 2019/1/2 3:16 PM</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyNotification</span></span><br><span class="hljs-class"></span>&#123;<br><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_ID_GL = <span class="hljs-string">"com.jz.gailun"</span>;<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_NAME_GL = <span class="hljs-string">"盖伦"</span>;<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_ID_AX = <span class="hljs-string">"com.jz.aixi"</span>;<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_NAME_AX = <span class="hljs-string">"艾希"</span>;<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_ID_LL = <span class="hljs-string">"com.jz.liulang"</span>;<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_NAME_LL = <span class="hljs-string">"流浪"</span>;<br><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setONotifyChannel</span><span class="hljs-params">(NotificationManager manager, String channeId, String channelName)</span></span><br><span class="hljs-function">  </span>&#123;<br>    setONotifyChannel(manager, <span class="hljs-keyword">null</span>, channeId, channelName);<br>  &#125;<br><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setONotifyChannel</span><span class="hljs-params">(NotificationManager manager, NotificationCompat.Builder builder, String channeId, String channelName)</span></span><br><span class="hljs-function">  </span>&#123;<br>    <span class="hljs-keyword">if</span> (TextUtils.isEmpty(channeId) || TextUtils.isEmpty(channelName))<br>      Logger.e(<span class="hljs-string">"Android 8.0 Notification的channeId与channelName不能为空"</span>);<br><br>    <span class="hljs-keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="hljs-number">26</span>)<br>    &#123;<br>      <span class="hljs-comment">// 第三个参数设置通知的优先级别</span><br>      NotificationChannel channel = <span class="hljs-keyword">new</span> NotificationChannel(channeId, channelName, NotificationManager.IMPORTANCE_DEFAULT);<br>      <span class="hljs-comment">// 是否可以绕过请勿打扰模式</span><br>      channel.canBypassDnd();<br>      <span class="hljs-comment">// 是否可以显示icon角标</span><br>      channel.canShowBadge();<br>      <span class="hljs-comment">// 是否显示通知闪灯</span><br>      channel.enableLights(<span class="hljs-keyword">true</span>);<br>      <span class="hljs-comment">// 收到消息时震动提示</span><br>      channel.enableVibration(<span class="hljs-keyword">true</span>);<br>      <span class="hljs-comment">// 设置绕过免打扰</span><br>      channel.setBypassDnd(<span class="hljs-keyword">true</span>);<br>      channel.setLockscreenVisibility(NotificationCompat.VISIBILITY_SECRET);<br>      <span class="hljs-comment">// 设置闪光灯颜色</span><br>      channel.setLightColor(Color.RED);<br>      <span class="hljs-comment">// 获取设置铃声设置</span><br>      channel.getAudioAttributes();<br>      <span class="hljs-comment">// 设置震动模式</span><br>      channel.setVibrationPattern(<span class="hljs-keyword">new</span> <span class="hljs-keyword">long</span>[]&#123;<span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>&#125;);<br>      <span class="hljs-comment">// 是否会闪光</span><br>      channel.shouldShowLights();<br>      <span class="hljs-keyword">if</span> (manager != <span class="hljs-keyword">null</span>)<br>        manager.createNotificationChannel(channel);<br>      <span class="hljs-keyword">if</span> (builder != <span class="hljs-keyword">null</span>)<br>        builder.setChannelId(channeId);<span class="hljs-comment">//这个id参数要与上面channel构建的第一个参数对应</span><br>    &#125;<br>  &#125;<br><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Notification <span class="hljs-title">getNotification</span><span class="hljs-params">(Context context, String channelId)</span></span><br><span class="hljs-function">  </span>&#123;<br>    NotificationCompat.Builder notificationBuilder = <span class="hljs-keyword">new</span> NotificationCompat.Builder(context, channelId);<br>    Notification notification = notificationBuilder.setOngoing(<span class="hljs-keyword">true</span>)<br>            .setSmallIcon(R.mipmap.ic_logo)<br>            .setPriority(NotificationManager.IMPORTANCE_MIN)<br>            .setCategory(Notification.CATEGORY_SERVICE)<br>            .build();<br>    <span class="hljs-keyword">return</span> notification;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_ID_GL = <span class="hljs-string">"com.jz.gailun"</span>;
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_NAME_GL = <span class="hljs-string">"盖伦"</span>;
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_ID_AX = <span class="hljs-string">"com.jz.aixi"</span>;
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_NAME_AX = <span class="hljs-string">"艾希"</span>;
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_ID_LL = <span class="hljs-string">"com.jz.liulang"</span>;
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CHANNEL_NAME_LL = <span class="hljs-string">"流浪"</span>;
-
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setONotifyChannel</span><span class="hljs-params">(NotificationManager manager, String channeId, String channelName)</span></span>
-<span class="hljs-function">  </span>&#123;
-    setONotifyChannel(manager, <span class="hljs-keyword">null</span>, channeId, channelName);
-  &#125;
-
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setONotifyChannel</span><span class="hljs-params">(NotificationManager manager, NotificationCompat.Builder builder, String channeId, String channelName)</span></span>
-<span class="hljs-function">  </span>&#123;
-    <span class="hljs-keyword">if</span> (TextUtils.isEmpty(channeId) || TextUtils.isEmpty(channelName))
-      Logger.e(<span class="hljs-string">"Android 8.0 Notification的channeId与channelName不能为空"</span>);
-
-    <span class="hljs-keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="hljs-number">26</span>)
-    &#123;
-      <span class="hljs-comment">// 第三个参数设置通知的优先级别</span>
-      NotificationChannel channel = <span class="hljs-keyword">new</span> NotificationChannel(channeId, channelName, NotificationManager.IMPORTANCE_DEFAULT);
-      <span class="hljs-comment">// 是否可以绕过请勿打扰模式</span>
-      channel.canBypassDnd();
-      <span class="hljs-comment">// 是否可以显示icon角标</span>
-      channel.canShowBadge();
-      <span class="hljs-comment">// 是否显示通知闪灯</span>
-      channel.enableLights(<span class="hljs-keyword">true</span>);
-      <span class="hljs-comment">// 收到消息时震动提示</span>
-      channel.enableVibration(<span class="hljs-keyword">true</span>);
-      <span class="hljs-comment">// 设置绕过免打扰</span>
-      channel.setBypassDnd(<span class="hljs-keyword">true</span>);
-      channel.setLockscreenVisibility(NotificationCompat.VISIBILITY_SECRET);
-      <span class="hljs-comment">// 设置闪光灯颜色</span>
-      channel.setLightColor(Color.RED);
-      <span class="hljs-comment">// 获取设置铃声设置</span>
-      channel.getAudioAttributes();
-      <span class="hljs-comment">// 设置震动模式</span>
-      channel.setVibrationPattern(<span class="hljs-keyword">new</span> <span class="hljs-keyword">long</span>[]&#123;<span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>&#125;);
-      <span class="hljs-comment">// 是否会闪光</span>
-      channel.shouldShowLights();
-      <span class="hljs-keyword">if</span> (manager != <span class="hljs-keyword">null</span>)
-        manager.createNotificationChannel(channel);
-      <span class="hljs-keyword">if</span> (builder != <span class="hljs-keyword">null</span>)
-        builder.setChannelId(channeId);<span class="hljs-comment">//这个id参数要与上面channel构建的第一个参数对应</span>
-    &#125;
-  &#125;
-
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Notification <span class="hljs-title">getNotification</span><span class="hljs-params">(Context context, String channelId)</span></span>
-<span class="hljs-function">  </span>&#123;
-    NotificationCompat.Builder notificationBuilder = <span class="hljs-keyword">new</span> NotificationCompat.Builder(context, channelId);
-    Notification notification = notificationBuilder.setOngoing(<span class="hljs-keyword">true</span>)
-            .setSmallIcon(R.mipmap.ic_logo)
-            .setPriority(NotificationManager.IMPORTANCE_MIN)
-            .setCategory(Notification.CATEGORY_SERVICE)
-            .build();
-    <span class="hljs-keyword">return</span> notification;
-  &#125;
-&#125;</code></pre>
-
-<pre><code class="hljs java"><span class="hljs-comment">/**</span>
-<span class="hljs-comment"> * Description: 通知管理类</span>
-<span class="hljs-comment"> * Author: Jack Zhang</span>
-<span class="hljs-comment"> * create on: 2019/1/2 3:23 PM</span>
-<span class="hljs-comment"> */</span>
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NotifyManager</span></span>
-<span class="hljs-class"></span>&#123;
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">static</span> NotifyManager INSTANCE;
-
-  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">NotifyManager</span><span class="hljs-params">(Context context)</span></span>
-<span class="hljs-function">  </span>&#123;
-    initNotifyManager(context);
-  &#125;
-
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> NotifyManager <span class="hljs-title">getInstance</span><span class="hljs-params">(Context context)</span></span>
-<span class="hljs-function">  </span>&#123;
-    <span class="hljs-keyword">if</span> (INSTANCE == <span class="hljs-keyword">null</span>)
-      <span class="hljs-keyword">synchronized</span> (NotifyManager<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>
-<span class="hljs-class">      </span>&#123;
-        <span class="hljs-keyword">if</span> (INSTANCE == <span class="hljs-keyword">null</span>)
-          INSTANCE = <span class="hljs-keyword">new</span> NotifyManager(context);
-      &#125;
-    <span class="hljs-keyword">return</span> INSTANCE;
-  &#125;
-
-  <span class="hljs-keyword">private</span> NotificationManager manager;
-  <span class="hljs-comment">// NotificationManagerCompat</span>
-  <span class="hljs-keyword">private</span> NotificationCompat.Builder builder;
-
-  <span class="hljs-comment">// 初始化通知栏配置</span>
-  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initNotifyManager</span><span class="hljs-params">(Context context)</span></span>
-<span class="hljs-function">  </span>&#123;
-    context = context.getApplicationContext();
-    manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-<span class="hljs-comment">//    // 如果存在则清除上一个消息</span>
-<span class="hljs-comment">//    manager.cancel(lastNotificationId);</span>
-    builder = <span class="hljs-keyword">new</span> NotificationCompat.Builder(context, MyNotification.CHANNEL_ID_GL);
-
-    MyNotification.setONotifyChannel(manager, builder, MyNotification.CHANNEL_ID_GL, MyNotification.CHANNEL_NAME_GL);
-
-    <span class="hljs-comment">// 设置标题</span>
-    builder.setContentTitle(<span class="hljs-string">"Title"</span>);
-    <span class="hljs-comment">// 状态栏的动画提醒语句</span>
-    builder.setTicker(<span class="hljs-string">"Ticker"</span>);
-    <span class="hljs-comment">// 什么时候提醒</span>
-    builder.setWhen(System.currentTimeMillis());
-    <span class="hljs-comment">// 设置通知栏的优先级</span>
-    builder.setPriority(Notification.PRIORITY_DEFAULT);
-    <span class="hljs-comment">// 设置点击可消失</span>
-    builder.setAutoCancel(<span class="hljs-keyword">true</span>);
-    <span class="hljs-comment">// 设置是否震动等</span>
-    builder.setDefaults(Notification.DEFAULT_VIBRATE);
-    <span class="hljs-comment">// 设置icon</span>
-    builder.setSmallIcon(R.mipmap.ic_logo);
-    <span class="hljs-comment">// 设置点击意图</span>
-    Intent intent = <span class="hljs-keyword">new</span> Intent(context, MainActivity<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
-    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-    PendingIntent pendingIntent = PendingIntent.getActivity(context, <span class="hljs-number">0</span>, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-    builder.setContentIntent(pendingIntent);
-  &#125;
-
-  <span class="hljs-comment">/**</span>
-<span class="hljs-comment">   * 显示盖伦通知栏</span>
-<span class="hljs-comment">   *</span>
-<span class="hljs-comment">   * <span class="hljs-doctag">@author</span> Jack Zhang</span>
-<span class="hljs-comment">   * create at 2019/1/2 3:28 PM</span>
-<span class="hljs-comment">   */</span>
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showGLNotify</span><span class="hljs-params">(Context context)</span></span>
-<span class="hljs-function">  </span>&#123;
-    <span class="hljs-comment">// 设置内容</span>
-    builder.setContentText(<span class="hljs-string">"盖伦"</span>);
-    manager.notify(<span class="hljs-number">1</span>, builder.build());
-  &#125;
-
-  <span class="hljs-comment">/**</span>
-<span class="hljs-comment">   * 显示艾希通知栏</span>
-<span class="hljs-comment">   *</span>
-<span class="hljs-comment">   * <span class="hljs-doctag">@author</span> Jack Zhang</span>
-<span class="hljs-comment">   * create at 2019/1/2 3:28 PM</span>
-<span class="hljs-comment">   */</span>
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showAXNotify</span><span class="hljs-params">(Context context)</span></span>
-<span class="hljs-function">  </span>&#123;
-    builder.setContentText(<span class="hljs-string">"艾希"</span>);
-    manager.notify(<span class="hljs-number">2</span>, builder.build());
-  &#125;
-
-  <span class="hljs-comment">/**</span>
-<span class="hljs-comment">   * 显示流浪通知栏</span>
-<span class="hljs-comment">   *</span>
-<span class="hljs-comment">   * <span class="hljs-doctag">@author</span> Jack Zhang</span>
-<span class="hljs-comment">   * create at 2019/1/2 3:28 PM</span>
-<span class="hljs-comment">   */</span>
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showLLNotify</span><span class="hljs-params">(Context context)</span></span>
-<span class="hljs-function">  </span>&#123;
-    builder.setContentText(<span class="hljs-string">"流浪"</span>);
-    manager.notify(<span class="hljs-number">3</span>, builder.build());
-  &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Description: 通知管理类</span><br><span class="hljs-comment"> * Author: Jack Zhang</span><br><span class="hljs-comment"> * create on: 2019/1/2 3:23 PM</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NotifyManager</span></span><br><span class="hljs-class"></span>&#123;<br>  <span class="hljs-keyword">private</span> <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">static</span> NotifyManager INSTANCE;<br><br>  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">NotifyManager</span><span class="hljs-params">(Context context)</span></span><br><span class="hljs-function">  </span>&#123;<br>    initNotifyManager(context);<br>  &#125;<br><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> NotifyManager <span class="hljs-title">getInstance</span><span class="hljs-params">(Context context)</span></span><br><span class="hljs-function">  </span>&#123;<br>    <span class="hljs-keyword">if</span> (INSTANCE == <span class="hljs-keyword">null</span>)<br>      <span class="hljs-keyword">synchronized</span> (NotifyManager<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span><br><span class="hljs-class">      </span>&#123;<br>        <span class="hljs-keyword">if</span> (INSTANCE == <span class="hljs-keyword">null</span>)<br>          INSTANCE = <span class="hljs-keyword">new</span> NotifyManager(context);<br>      &#125;<br>    <span class="hljs-keyword">return</span> INSTANCE;<br>  &#125;<br><br>  <span class="hljs-keyword">private</span> NotificationManager manager;<br>  <span class="hljs-comment">// NotificationManagerCompat</span><br>  <span class="hljs-keyword">private</span> NotificationCompat.Builder builder;<br><br>  <span class="hljs-comment">// 初始化通知栏配置</span><br>  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initNotifyManager</span><span class="hljs-params">(Context context)</span></span><br><span class="hljs-function">  </span>&#123;<br>    context = context.getApplicationContext();<br>    manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);<br><span class="hljs-comment">//    // 如果存在则清除上一个消息</span><br><span class="hljs-comment">//    manager.cancel(lastNotificationId);</span><br>    builder = <span class="hljs-keyword">new</span> NotificationCompat.Builder(context, MyNotification.CHANNEL_ID_GL);<br><br>    MyNotification.setONotifyChannel(manager, builder, MyNotification.CHANNEL_ID_GL, MyNotification.CHANNEL_NAME_GL);<br><br>    <span class="hljs-comment">// 设置标题</span><br>    builder.setContentTitle(<span class="hljs-string">"Title"</span>);<br>    <span class="hljs-comment">// 状态栏的动画提醒语句</span><br>    builder.setTicker(<span class="hljs-string">"Ticker"</span>);<br>    <span class="hljs-comment">// 什么时候提醒</span><br>    builder.setWhen(System.currentTimeMillis());<br>    <span class="hljs-comment">// 设置通知栏的优先级</span><br>    builder.setPriority(Notification.PRIORITY_DEFAULT);<br>    <span class="hljs-comment">// 设置点击可消失</span><br>    builder.setAutoCancel(<span class="hljs-keyword">true</span>);<br>    <span class="hljs-comment">// 设置是否震动等</span><br>    builder.setDefaults(Notification.DEFAULT_VIBRATE);<br>    <span class="hljs-comment">// 设置icon</span><br>    builder.setSmallIcon(R.mipmap.ic_logo);<br>    <span class="hljs-comment">// 设置点击意图</span><br>    Intent intent = <span class="hljs-keyword">new</span> Intent(context, MainActivity<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;<br>    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);<br>    PendingIntent pendingIntent = PendingIntent.getActivity(context, <span class="hljs-number">0</span>, intent, PendingIntent.FLAG_UPDATE_CURRENT);<br>    builder.setContentIntent(pendingIntent);<br>  &#125;<br><br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 显示盖伦通知栏</span><br><span class="hljs-comment">   *</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@author</span> Jack Zhang</span><br><span class="hljs-comment">   * create at 2019/1/2 3:28 PM</span><br><span class="hljs-comment">   */</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showGLNotify</span><span class="hljs-params">(Context context)</span></span><br><span class="hljs-function">  </span>&#123;<br>    <span class="hljs-comment">// 设置内容</span><br>    builder.setContentText(<span class="hljs-string">"盖伦"</span>);<br>    manager.notify(<span class="hljs-number">1</span>, builder.build());<br>  &#125;<br><br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 显示艾希通知栏</span><br><span class="hljs-comment">   *</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@author</span> Jack Zhang</span><br><span class="hljs-comment">   * create at 2019/1/2 3:28 PM</span><br><span class="hljs-comment">   */</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showAXNotify</span><span class="hljs-params">(Context context)</span></span><br><span class="hljs-function">  </span>&#123;<br>    builder.setContentText(<span class="hljs-string">"艾希"</span>);<br>    manager.notify(<span class="hljs-number">2</span>, builder.build());<br>  &#125;<br><br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 显示流浪通知栏</span><br><span class="hljs-comment">   *</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@author</span> Jack Zhang</span><br><span class="hljs-comment">   * create at 2019/1/2 3:28 PM</span><br><span class="hljs-comment">   */</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showLLNotify</span><span class="hljs-params">(Context context)</span></span><br><span class="hljs-function">  </span>&#123;<br>    builder.setContentText(<span class="hljs-string">"流浪"</span>);<br>    manager.notify(<span class="hljs-number">3</span>, builder.build());<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p><strong>SecurityException的闪退</strong></p>
 <p>问题原因：项目使用了ActiveAndroid，在 8.0 或 8.1 系统上使用 26 或以上的版本的 SDK 时，调用 ContentResolver 的 notifyChange 方法通知数据更新，或者调用 ContentResolver 的 registerContentObserver 方法监听数据变化时，会出现上述异常。</p>
 <p><strong>解决方案：</strong><br>在清单文件配置：</p>
-<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">provider</span></span>
-<span class="hljs-tag">       <span class="hljs-attr">android:name</span>=<span class="hljs-string">"com.activeandroid.content.ContentProvider"</span></span>
-<span class="hljs-tag">       <span class="hljs-attr">android:authorities</span>=<span class="hljs-string">"com.jz.androidclient"</span></span>
-<span class="hljs-tag">       <span class="hljs-attr">android:enabled</span>=<span class="hljs-string">"true"</span></span>
-<span class="hljs-tag">       <span class="hljs-attr">android:exported</span>=<span class="hljs-string">"false"</span>/&gt;</span></code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">provider</span></span><br><span class="hljs-tag">       <span class="hljs-attr">android:name</span>=<span class="hljs-string">"com.activeandroid.content.ContentProvider"</span></span><br><span class="hljs-tag">       <span class="hljs-attr">android:authorities</span>=<span class="hljs-string">"com.jz.androidclient"</span></span><br><span class="hljs-tag">       <span class="hljs-attr">android:enabled</span>=<span class="hljs-string">"true"</span></span><br><span class="hljs-tag">       <span class="hljs-attr">android:exported</span>=<span class="hljs-string">"false"</span>/&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p>去掉这个监听刷新的方法，改为广播刷新</p>
 <p><strong>静态广播无法正常接收</strong></p>
@@ -635,50 +478,62 @@ SharedPreferences read = getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READ
 <p>问题原因： Android P 限制了明文流量的网络请求，非加密的流量请求都会被系统禁止掉</p>
 <p>解决方案：</p>
 <p>在资源文件新建xml目录，新建文件network_security_config.xml</p>
-<pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">network-security-config</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">base-config</span> <span class="hljs-attr">cleartextTrafficPermitted</span>=<span class="hljs-string">"true"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">network-security-config</span>&gt;</span></code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">network-security-config</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">base-config</span> <span class="hljs-attr">cleartextTrafficPermitted</span>=<span class="hljs-string">"true"</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">network-security-config</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p>清单文件配置：</p>
-<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">application</span></span>
-<span class="hljs-tag">    <span class="hljs-attr">android:networkSecurityConfig</span>=<span class="hljs-string">"@xml/network_security_config"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!--Android 9.0加的--&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">uses-library</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">android:name</span>=<span class="hljs-string">"org.apache.http.legacy"</span></span>
-<span class="hljs-tag">        <span class="hljs-attr">android:required</span>=<span class="hljs-string">"false"</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">application</span>&gt;</span></code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">application</span></span><br><span class="hljs-tag">    <span class="hljs-attr">android:networkSecurityConfig</span>=<span class="hljs-string">"@xml/network_security_config"</span>&gt;</span><br>    <span class="hljs-comment">&lt;!--Android 9.0加的--&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">uses-library</span></span><br><span class="hljs-tag">        <span class="hljs-attr">android:name</span>=<span class="hljs-string">"org.apache.http.legacy"</span></span><br><span class="hljs-tag">        <span class="hljs-attr">android:required</span>=<span class="hljs-string">"false"</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">application</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>其他Api的修改</strong></p>
 <blockquote>
 <p>java.lang.IllegalArgumentException: Invalid Region.Op - only INTERSECT<br>and DIFFERENCE are allowed</p>
 </blockquote>
-<pre><code class="hljs java"><span class="hljs-keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="hljs-number">26</span>) 
-  canvas.clipPath(mPath); 
-<span class="hljs-keyword">else</span>
-  canvas.clipPath(mPath, Region.Op.REPLACE);</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">if</span> (Build.VERSION.SDK_INT &gt;= <span class="hljs-number">26</span>) <br>  canvas.clipPath(mPath); <br><span class="hljs-keyword">else</span><br>  canvas.clipPath(mPath, Region.Op.REPLACE);<br></code></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <p>转载<br><a href="https://blog.csdn.net/wxz1179503422/article/details/84874171" target="_blank" rel="noopener">https://blog.csdn.net/wxz1179503422/article/details/84874171</a><br><a href="https://blog.csdn.net/weixin_41729259/article/details/89368713?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.control&amp;dist_request_id=ebfab3d9-0b16-4f74-9fed-c5c0c8ca2ac5&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.control" target="_blank" rel="noopener">https://blog.csdn.net/weixin_41729259/article/details/89368713?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.control&amp;dist_request_id=ebfab3d9-0b16-4f74-9fed-c5c0c8ca2ac5&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-17.control</a></p>
 
-            </article>
+            </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Android/">Android</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Android/">Android</a>
+                    
+                  </div>
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
               
               
-                <div class="post-prevnext row">
-                  <div class="post-prev col-6">
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
                     
                     
-                  </div>
-                  <div class="post-next col-6">
+                      <a href="/2021/02/23/apk%E5%8C%85%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">dex文件结构分析</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
                     
                     
                       <a href="/2020/05/22/hello-world/">
@@ -687,13 +542,13 @@ SharedPreferences read = getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READ
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
-                  </div>
+                  </article>
                 </div>
               
             </div>
 
             
-          </div>
+          </article>
         </div>
       </div>
     </div>
@@ -701,7 +556,7 @@ SharedPreferences read = getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READ
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
         <div id="toc">
   <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
+  <div class="toc-body" id="toc-body"></div>
 </div>
 
       </div>
@@ -713,16 +568,15 @@ SharedPreferences read = getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READ
 
 
     
-  </main>
 
-  
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
-  
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
      aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
@@ -743,141 +597,124 @@ SharedPreferences read = getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READ
     </div>
   </div>
 </div>
-  
-
-  
-
-  
-
-  <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-      <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid</span></a>
-    </div>
     
 
     
+  </main>
 
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
     
   </div>
+
+
+  
+
+  
 </footer>
 
 <!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/main.js" ></script>
 
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
 
-  <script  src="/js/lazyload.js" ></script>
-
-
-
-  
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
   <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: '.post-content',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 0,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
   </script>
 
 
-
-
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-
-
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 <!-- Plugins -->
 
 
+  
+    <script  src="/js/lazyload.js" ></script>
+  
 
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
   <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "Android各版本适配（基于6.0 ～ 9.0）&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "right",
-      visible: "hover",
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
       
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
+      typing(title)
+      
+    })(window, document);
   </script>
 
 
 
   <script  src="/js/local-search.js" ></script>
   <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
   </script>
 
 
@@ -894,6 +731,8 @@ SharedPreferences read = getSharedPreferences(RELEASE_POOL_DATA, MODE_WORLD_READ
 
 
 
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 

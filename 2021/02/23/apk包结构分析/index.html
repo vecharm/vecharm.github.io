@@ -20,7 +20,7 @@
   <meta name="author" content="Vecharm">
   <meta name="keywords" content="">
   
-  <title>Hello World - Vecharm 的个人主页</title>
+  <title>dex文件结构分析 - Vecharm 的个人主页</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -165,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="dex文件结构分析">
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-05-22 16:23" pubdate>
-        2020年5月22日 下午
+      <time datetime="2021-02-23 16:34" pubdate>
+        2021年2月23日 下午
       </time>
     </span>
   
@@ -187,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      73 字
+      728 字
     </span>
   
 
@@ -197,7 +197,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      8
        分钟
     </span>
   
@@ -227,28 +227,95 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">dex文件结构分析</h1>
             
             <div class="markdown-body">
-              <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span></code></pre>
+              <p>文件结构展示</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184712_pRNn.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>DEX文件格式</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184713_0Qgo.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>DEX文件在010中的表现</p>
+<p>文件结构详解</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184713_70RF.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>结构体定义</p>
+<p>文件头( dex_header )。</p>
+<ul>
+<li><p>magic[8]：dex版本标识。这类字节必须出现在 .dex 文件的开头，以便系统将其原样识别。该值会特意包含一个换行符(“\n” 或 0x0a)和空字节(“\0” 或 0x00)，以便协助检测某些形式的损坏问题。该值还可以将格式版本号编码为 3 个十进制数字;随着格式的演变，预计该值会单调递增。</p>
+</li>
+<li><p>checksum：可以用于文件剩余内容(除 magic 和此字段之外的所有内容)的 adler32 校验和。另外，还可以用于检测文件损坏情况。</p>
+</li>
+<li><p>signature[kSha1DigestSize]：文件剩余内容(除 magic、checksum 和此字段之外的所有内容)的 SHA-1 签名(哈希);用于对文件进行唯一标识。</p>
+</li>
+<li><p>file_size：整个文件(包括标头)的大小，以字节为单位。</p>
+</li>
+<li><p>header_size：标头(整个区段)的大小，以字节为单位。这一项允许至少一定程度的向后/向前兼容性，而不必让格式失效。</p>
+</li>
+<li><p>endian_tag：字节序标记。ENDIAN_CONSTANT ，表示小端字节序。</p>
+</li>
+<li><p>REVERSE_ENDIAN_CONSTANT 表示大端字节序，默认值为</p>
+</li>
+<li><p>ENDIAN_CONSTANT 。</p>
+</li>
+<li><p><code>link_size</code> 与 <code>link_off</code> ：链接区段的大小与文件偏移。如果此文件未进行静态链接，则两个值都为0。</p>
+</li>
+<li><p><code>map_off</code>：从文件开头到映射项列表的文件偏移量。</p>
+</li>
+<li><p><code>string_ids_size</code> 与 <code>string_ids_off</code>：字符串标识符列表中的字符串数量与文件偏移。</p>
+</li>
+<li><p><code>type_ids_size</code> 与 <code>type_ids_off</code>：类型标识符列表中的元素数量及文件偏移。元素数量上限为65535。</p>
+</li>
+<li><p><code>proto_ids_size</code> 与 <code>proto_ids_off</code>：原型标识符列表中的元素数量及文件偏移。元素数量上限为65535。</p>
+</li>
+<li><p><code>field_ids_size</code> 与 field_ids_off：字段标识符列表中的元素数量及文件偏移。</p>
+</li>
+<li><p><code>method_ids_size</code> 与 method_ids_off：方法标识符列表中的元素数量及文件偏移。</p>
+</li>
+<li><p><code>class_defs_size</code> 与 <code>class_defs_off</code>：类定义列表中的元素数量及文件偏移。</p>
+</li>
+<li><p><code>data_size</code> 与 <code>data_off</code> ：data区段的大小及文件偏移。</p>
+</li>
+</ul>
+<p>字符串标识符列表( dex_string_ids )在DEX文件以 DexStringId[] 的形式存在，其结构如下。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">DexStringId</span>&#123;</span><br>    u4 stringDataoff; <span class="hljs-comment">//字符串数据的文件偏移</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>类型标识符列表( dex_type_ids )在DEX文件以 DexTypeId[] 的形式存在，其结构如下。</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184713_F5ew.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>方法原型标识符列表( dex_proto_ids )在DEX文件以 DexProtoId[] 的形式存在，其中 DexProtoId 结构如下。</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184713_cnGo.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>DexTypeList 结构如下。</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184714_55DY.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>字段标识符列表( dex_field_ids )在DEX文件以 DexFieldId[] 的形式存在，其中 DexFieldId 结构如下。</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184714_RN7O.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>方法标识符列表( dex_method_ids ) 在DEX文件以 DexMethodId[] 的形式存在，其中 DexMethodId 结构如下。</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184714_nG8Z.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>类定义列列表( dex_class_defs )在DEX文件以 DexClassDef[] 的形式存在，其中 DexClassDef 结构如下。</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184714_IE9A.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>映射项列表( dex_map_list ) 在DEX文件以 DexMapItem[] 的形式存在，其中 DexMapItem 结构如下。</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184714_5Cdf.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>类型代码表如图所示。</p>
+<p><img src="https://static.oschina.net/uploads/img/202006/15184715_stmj.jpg" srcset="/img/loading.gif" alt=""></p>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Android/">Android</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Android/">Android</a>
+                    
+                  </div>
                 
               </div>
               
@@ -263,15 +330,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/02/22/Android%E5%90%84%E7%89%88%E6%9C%AC%E9%80%82%E9%85%8D%EF%BC%88%E5%9F%BA%E4%BA%8E6.0%20%EF%BD%9E%209.0%EF%BC%89/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Android各版本适配（基于6.0 ～ 9.0）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/02/22/Android%E5%90%84%E7%89%88%E6%9C%AC%E9%80%82%E9%85%8D%EF%BC%88%E5%9F%BA%E4%BA%8E6.0%20%EF%BD%9E%209.0%EF%BC%89/">
+                        <span class="hidden-mobile">Android各版本适配（基于6.0 ～ 9.0）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
